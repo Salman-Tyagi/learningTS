@@ -16,11 +16,15 @@ const getTodo = async () => {
   const title = todo.title;
   const completed = todo.completed;
 
-  console.log(`
-    The Todo with ID: ${id}
-    Has a title of ${title}
-    is it finished? ${completed}
-  `);
+  logTodo(id, title, completed);
 };
 
 getTodo();
+
+const logTodo = (id: number, title: string, completed: boolean) => {
+  console.log(`
+      The Todo with ID: ${id}
+      Has a title of ${title}
+      is it finished? ${completed}
+    `);
+};

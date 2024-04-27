@@ -39,15 +39,22 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var axios_1 = require("axios");
 var url = 'https://jsonplaceholder.typicode.com/todos/1';
 var getTodo = function () { return __awaiter(void 0, void 0, void 0, function () {
-    var res;
+    var res, todo, id, title, completed;
     return __generator(this, function (_a) {
         switch (_a.label) {
             case 0: return [4 /*yield*/, axios_1.default.get(url)];
             case 1:
                 res = _a.sent();
-                console.log(res.data);
+                todo = res.data;
+                id = todo.id;
+                title = todo.title;
+                completed = todo.completed;
+                logTodo(id, title, completed);
                 return [2 /*return*/];
         }
     });
 }); };
 getTodo();
+var logTodo = function (id, title, completed) {
+    console.log("\n      The Todo with ID: ".concat(id, "\n      Has a title of ").concat(title, "\n      is it finished? ").concat(completed, "\n    "));
+};

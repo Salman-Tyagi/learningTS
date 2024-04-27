@@ -43,3 +43,23 @@ const coordinates: { x: number; y: number } = JSON.parse(json);
 console.log(coordinates); // {x: 10, y: 20}
 
 // console.log(coordinates.fhdjkshjkh);
+
+const arr: string[] = ['red', 'green', 'blue'];
+// let foundGreen: boolean;
+let foundGreen = false;
+
+
+for (let i = 0; i < arr.length; i++) {
+  if (arr[i] === 'green') {
+    foundGreen = true;
+  }
+}
+
+const arr2: number[] = [-10, -3, 7];
+let numberAboveZero: false | number;
+
+for(let i = 0; i < arr2.length; i++) {
+  if (arr2[i] > 0) {
+    numberAboveZero = arr2[i];
+  }
+}

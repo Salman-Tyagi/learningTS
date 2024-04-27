@@ -29,3 +29,17 @@ let numObject: { x: number; y: number } = {
   x: 10,
   y: 20,
 };
+
+// Function annotation
+const logNumber: (i: number) => void = (i: number) => {
+  console.log(i);
+};
+
+// fix any type notation
+// when function return value of type any
+const json = '{"x": 10, "y": 20}';
+const coordinates: { x: number; y: number } = JSON.parse(json);
+
+console.log(coordinates); // {x: 10, y: 20}
+
+// console.log(coordinates.fhdjkshjkh);

@@ -1,22 +1,22 @@
 const add = (a: number, b: number): number => {
-    return a + b;
+  return a + b;
 };
 
 const substract = (a: number, b: number): number => {
-   return a - b;
-}
+  return a - b;
+};
 
-function divide(a:number, b:number):number {
-    return a / b;
+function divide(a: number, b: number): number {
+  return a / b;
 }
 
 const multiply = function (a: number, b: number): number {
   return a * b;
 };
 
-const logger = (message:string): void => {
+const logger = (message: string): void => {
   console.log(message);
-}
+};
 
 const throwError = (message: string): string => {
   if (!message) {
@@ -27,7 +27,7 @@ const throwError = (message: string): string => {
 };
 
 const person = {
-  name: 'Peter',
+  username: 'Peter',
   age: 30,
   coords: {
     lat: 0,
@@ -38,7 +38,7 @@ const person = {
   },
 };
 
-const { age, name }: { age: number; name: string } = person;
+const { age, username }: { age: number; username: string } = person;
 
 const {
   coords: { lat, lng },

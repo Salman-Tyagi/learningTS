@@ -28,11 +28,22 @@ vehicle.startDrivingProcess();
 console.log(vehicle.color);
 console.log(vehicle2.color);
 
-// class Car extends Vehicle {
-//   honk(): void {
-//     console.log('beep beep');
-//   }
-// }
+class Car extends Vehicle {
+  constructor(public wheels: number, color: string) {
+    super(color);
+  }
 
-// const car = new Car();
-// car.honk();
+  redCar(): void {
+    console.log(`This new ${this.color} car has ${this.wheels} wheels`);
+  }
+
+  honk(): void {
+    console.log('beep beep');
+  }
+}
+
+const car = new Car(4, 'red');
+car.honk();
+console.log(car.color);
+console.log(car.wheels);
+car.redCar();

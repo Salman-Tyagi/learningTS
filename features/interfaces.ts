@@ -14,12 +14,12 @@ const oldCivic = {
   },
 };
 
-const hero = {
-  name: 'Hero',
-  year: 2024,
-  broken: false,
+const drink = {
+  color: 'brown',
+  carbonated: true,
+  sugar: 40,
   summary(): string {
-    return `Name: ${this.name}`;
+    return `My drink has ${this.sugar} grams of sugar`;
   },
 };
 
@@ -27,5 +27,5 @@ const printSummary = (vehicle: Reportable): void => {
   console.log(vehicle.summary());
 };
 
-// printSummary(oldCivic);
-printSummary(hero);
+printSummary(oldCivic);
+printSummary(drink);
